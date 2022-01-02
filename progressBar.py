@@ -2,7 +2,6 @@ def progressBar(itens,length=50,prefixo="Progress",sufixo="Complete",preenchimen
 
     '''
         parametros:
-
         itens - interable para utilizar durante a progress bar (uma list por exemplo)  
         length - Tamanho da progress bar que vai de 10 a 100
         prefixo - palavra/frase que inicia a barra de progresso
@@ -10,7 +9,6 @@ def progressBar(itens,length=50,prefixo="Progress",sufixo="Complete",preenchimen
         preenchimento - valor que vai preencher a barra de progresso, padrão = #
         onProgress - Caractere que é executado após a finalização de um progresso, exemplo caractere é 
                     \n para quebra de linha a cada execução 
-
     '''
 
     if(length > 100 or length < 10):
@@ -30,7 +28,7 @@ def progressBar(itens,length=50,prefixo="Progress",sufixo="Complete",preenchimen
         barra = "{0} -> |{1}| {2}% {3} {4}".format(prefixo,preenchimentoAtual,porcentagem,sufixo,onProgress)
         
         #exibição ;)
-        print(barra)
+        print(barra,end='\r')
 
     #primeira atualização, literalmente o inicio da barra
     atualiza(0)
@@ -43,4 +41,3 @@ def progressBar(itens,length=50,prefixo="Progress",sufixo="Complete",preenchimen
 
     if(onProgress != "\n"):
         print()
-    
