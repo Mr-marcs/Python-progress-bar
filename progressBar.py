@@ -1,16 +1,5 @@
 def progressBar(itens,length=50,prefixo="Progress",sufixo="Complete",preenchimento="#",onProgress=""):
-
-    '''
-        parametros:
-        itens - interable para utilizar durante a progress bar (uma list por exemplo)  
-        length - Tamanho da progress bar que vai de 10 a 100
-        prefixo - palavra/frase que inicia a barra de progresso
-        sufixo - palavra/frase que termina na barra de progresso
-        preenchimento - valor que vai preencher a barra de progresso, padrão = #
-        onProgress - Caractere que é executado após a finalização de um progresso, exemplo caractere é 
-                    \n para quebra de linha a cada execução 
-    '''
-
+    
     if(length > 100 or length < 10):
         length = 50
 
