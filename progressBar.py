@@ -37,7 +37,7 @@ def progressBar(itens,length=50,prefixo="Progress",sufixo="Complete",preenchimen
                 yield index
                 atualiza(index +1 )
     except:
-        print("only interable or range allowed!")
+        print("only interable or range types allowed!")
         
     if(onProgress != "\n"):
         print()
